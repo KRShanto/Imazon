@@ -1,0 +1,168 @@
+nav {
+  background-color: rgb(2, 54, 100);
+  //   padding: 1rem;
+
+  .upper {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    .logo {
+      .text {
+        font-size: 2.5rem;
+        font-family: "Lobster", cursive;
+        color: gold;
+      }
+    }
+
+    .more {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      .text {
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: white;
+      }
+
+      .cart {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // border: 2px solid red;
+        text-decoration: none;
+        gap: 0.5rem;
+        color: rgb(199, 198, 198);
+
+        .cart-icon {
+          //   border: 2px solid red;
+          width: 30px;
+          height: 30px;
+        }
+
+        .text {
+          color: inherit;
+        }
+      }
+
+      .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        .profile-image {
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .btn {
+          font-size: 1.2rem;
+          font-weight: bold;
+          font-family: sans-serif;
+          color: white;
+          background-color: transparent;
+          padding: 0.5rem;
+          border-radius: 0.3rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .search-div {
+    display: flex;
+    align-items: center;
+
+    .search {
+      border-radius: 0.5rem;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      padding: 0.5rem;
+      width: 40rem;
+      font-size: 1rem;
+      border: none;
+      background-color: white;
+      color: black;
+    }
+
+    .search-icon {
+      //   border: 2px solid red;
+      width: 40px;
+      height: 40px;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: rgba(1, 255, 247, 0.595);
+    }
+  }
+}
+
+// media 1100 => decrease search width
+@media screen and (max-width: 1100px) {
+  nav {
+    .search-div {
+      .search {
+        width: 30rem;
+      }
+    }
+  }
+}
+
+// media 900 => decrease search width && other's fontsize
+@media screen and (max-width: 900px) {
+  nav {
+    .upper {
+      .logo {
+        .text {
+          font-size: 2.2rem;
+        }
+      }
+      .more {
+        gap: 2rem;
+        .text {
+          font-size: 1.2rem;
+        }
+
+        .cart {
+          .cart-icon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .profile {
+          .btn {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .search-div {
+      .search {
+        width: 20rem;
+      }
+    }
+  }
+}
+
+// media 700 => set search width to 90% and make it center
+@media screen and (max-width: 700px) {
+  nav {
+    .search-div {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 0.5rem;
+
+      .search {
+        width: 80%;
+      }
+    }
+  }
+}

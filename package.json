@@ -2,6 +2,16 @@
   "name": "imazon",
   "version": "0.1.0",
   "private": true,
+  "description": "An e-commerce website built with Next.js, React, TypeScript, and MongoDB.",
+  "author": {
+    "name": "KR Shanto",
+    "email": "krshanto2005@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KRShanto/Imazon.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,6 +27,8 @@
     "nodemailer": "^6.9.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-responsive": "^9.0.0",
     "react-spinners": "^0.13.8",
     "sass": "^1.58.3",
     "swr": "^2.0.3",
