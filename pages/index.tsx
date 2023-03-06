@@ -1,6 +1,6 @@
 import React from "react";
-import { signIn } from "next-auth/react";
 import Head from "next/head";
+import Home from "@/components/Home";
 
 export default function Index() {
   return (
@@ -13,11 +13,7 @@ export default function Index() {
         />
       </Head>
 
-      <div>
-        <h1>Hello world</h1>
-
-        <button onClick={() => signIn()}>Sign in with Google</button>
-      </div>
+      <Home />
     </>
   );
 }

@@ -1,0 +1,68 @@
+#side-nav {
+  width: 20%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  .heading {
+    font-size: 1.2rem;
+    font-family: "Tilt Neon", cursive;
+    color: rgb(181, 179, 179);
+    padding: 0.2rem 0;
+    text-align: center;
+    background-color: rgb(2, 54, 100);
+  }
+
+  .catagories {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    overflow: hidden;
+
+    .category {
+      display: flex;
+      flex-direction: column;
+
+      .upper {
+        border-bottom: 1px solid rgb(1, 204, 255);
+        // border-right: 1px solid rgb(1, 204, 255);
+        // border-left: 1px solid rgb(1, 204, 255);
+        background-color: rgb(2, 54, 100);
+
+        .name {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 1.1rem;
+          font-weight: bold;
+          font-family: "Tilt Neon", cursive;
+          color: rgb(217, 213, 213);
+          padding: 0.5rem 1rem;
+          background-color: transparent;
+          cursor: pointer;
+          border: none;
+          width: 100%;
+          text-align: left;
+          text-decoration: none;
+
+          .icon {
+            font-size: 1.8rem;
+          }
+
+          &:hover {
+            background-color: rgb(1, 107, 156) !important;
+            color: rgb(217, 213, 213);
+            transition: background-color 0.3s linear;
+          }
+        }
+
+        .name.link {
+          background-color: rgb(2, 77, 143);
+          color: rgb(217, 213, 213);
+        }
+
+        .name.expanded {
+          background-color: rgb(2, 122, 143);
+        }
+      }
+    }
+  }
+}

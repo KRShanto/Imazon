@@ -5,23 +5,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import SearchBar from "./SearchBar";
+import { useMobileStore } from "@/stores/mobile";
 
 export default function Navbar() {
   const { data: session, status } = useSession();
-  const [isMobile, setIsMobile] = useState(false);
   const [iconSize, setIconSize] = useState(50);
+  const { isMobile } = useMobileStore();
 
-  const media = useMediaQuery({ query: "(max-width: 700px)" });
+  const cartLength = 3; // TODO
 
   useEffect(() => {
-    if (media) {
-      setIsMobile(true);
+    if (isMobile) {
       setIconSize(40);
     } else {
-      setIsMobile(false);
       setIconSize(50);
     }
-  }, [media]);
+  }, [isMobile]);
 
   return (
     <nav>
@@ -36,6 +35,7 @@ export default function Navbar() {
           <Link href="/cart" className="cart">
             <FaShoppingCart className="cart-icon" />
             <p className="text">Cart</p>
+            <span className="cart-length">{cartLength}</span>
           </Link>
 
           <div className="profile">
